@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "image": "/caulong.png",
+    "name": "Vợt cầu lông Yonex",
+    "price": 1200000,
+    "description": "Vợt cầu lông Yonex chính hãng, nhẹ, bền, phù hợp cho người mới bắt đầu và vận động viên."
+  },
+  {
+    "id": 2,
+    "image": "/caulong.png",
+    "name": "Giày cầu lông Lining",
+    "price": 850000,
+    "description": "Giày cầu lông Lining êm ái, chống trơn trượt, bảo vệ bàn chân tối ưu khi thi đấu."
+  },
+  {
+    "id": 3,
+    "image": "/caulong.png",
+    "name": "Áo cầu lông Victor",
+    "price": 350000,
+    "description": "Áo cầu lông Victor thoáng khí, thấm hút mồ hôi tốt, thiết kế trẻ trung năng động."
+  },
+  {
+    "id": 4,
+    "image": "/caulong.png",
+    "name": "Quần cầu lông Mizuno",
+    "price": 290000,
+    "description": "Quần cầu lông Mizuno co giãn, thoải mái, phù hợp cho mọi hoạt động thể thao."
+  },
+  {
+    "id": 5,
+    "image": "/caulong.png",
+    "name": "Băng đô cầu lông",
+    "price": 50000,
+    "description": "Băng đô cầu lông thấm hút mồ hôi, giữ tóc gọn gàng khi thi đấu."
+  },
+  {
+    "id": 6,
+    "image": "/caulong.png",
+    "name": "Túi đựng vợt cầu lông",
+    "price": 200000,
+    "description": "Túi đựng vợt cầu lông tiện lợi, có nhiều ngăn chứa đồ."
+  },
+  {
+    "id": 7,
+    "image": "/caulong.png",
+    "name": "Bóng cầu lông Yonex",
+    "price": 300000,
+    "description": "Bóng cầu lông Yonex chất lượng cao, độ bền tốt, phù hợp cho các trận đấu chuyên nghiệp."
+  },
+  {
+    "id": 8,
+    "image": "/caulong.png",
+    "name": "Vợt cầu lông Victor",
+    "price": 1500000,
+    "description": "Vợt cầu lông Victor nhẹ, linh hoạt, giúp tăng cường sức mạnh và độ chính xác khi đánh."
+  },
+  {
+    "id": 9,
+    "image": "/caulong.png",
+    "name": "Quần áo cầu lông Adidas",
+    "price": 600000,
+    "description": "Quần áo cầu lông Adidas thoáng khí, thoải mái, giúp bạn tự tin hơn khi thi đấu."
+  }
+]
