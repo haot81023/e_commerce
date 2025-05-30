@@ -1,4 +1,5 @@
-// 'use client';
+'use client';
+import Link from 'next/link';
 import React from 'react';
 // import { Facebook } from 'lucide-react';
 // import { Twitter } from 'lucide-react';
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className='flex flex-col justify-between items-center bg-white p-4 shadow-md'>
             <div className="w-full flex justify-start">
                 <h1 className="text-2xl font-bold">
-                    <a href="/page.tsx">MyShopt.com</a>
+                    <Link href="/">MyShopt.com</Link>
                 </h1>
             </div>
             <div className="w-full flex justify-center">

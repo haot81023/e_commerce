@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Home, ShoppingBag, Info, Phone, User } from 'lucide-react';
+import { Home, ShoppingBag, Info, Phone } from 'lucide-react';
 
 const SideBar = () => {
     return (
@@ -17,9 +17,6 @@ const SideBar = () => {
                 </Link>
                 <Link href="#" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-200 font-semibold text-lg transition">
                     <Phone size={22} /> Contact
-                </Link>
-                <Link href="#" className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-blue-200 font-semibold text-lg transition">
-                    <User size={22} /> Login
                 </Link>
             </nav>
         </aside>

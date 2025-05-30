@@ -14,7 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 
 const formSchema = z.object({
   username: z.string().min(2, {message: "Username must be at least 2 characters."}),
@@ -39,21 +39,20 @@ export default function CheckOutForm() {
     },
   })
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  // function onSubmit(values: z.infer<typeof formSchema>) {
-  //   // xử lý thanh toán ở đây
-  //   console.log(values)
-  // }
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // xử lý thanh toán ở đây
+    console.log(values)
+  }
   
 
 
     return (
-    <Form 
-    {...form}
-  // onSubmit={form.handleSubmit(onSubmit)} 
+<form onSubmit={form.handleSubmit(onSubmit)}>
+  <Form {...form}
   // className="space-y-6 max-w-lg mx-auto p-8 bg-white rounded-2xl shadow-xl border border-gray-200"
->
+  >
   <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">Thông tin thanh toán</h2>
 
   {/* Họ tên */}
@@ -166,7 +165,7 @@ export default function CheckOutForm() {
         className="w-full border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-2 rounded-lg cursor-pointer shadow-md px-18"
         onClick={() => {
           if (window.confirm("Bạn có chắc muốn hủy đơn hàng không?")) {
-            router.push("/");
+            window.history.back();
           }
         }}
       >
@@ -176,7 +175,8 @@ export default function CheckOutForm() {
   </div>
 {/* </form> */}
 </Form>
-
+  {/* </Form> */}
+</form>
   )
 }
 

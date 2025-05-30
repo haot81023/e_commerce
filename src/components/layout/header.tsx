@@ -10,6 +10,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import Image from 'next/image';
 import { useRouter } from "next/navigation";
 import { Trash2, Eye } from "lucide-react";
+// import authService from '@/services/api/auth.service';
+import { useAuth } from '@/services/api/AuthProvider';
 
 import {
   DropdownMenu,
@@ -28,6 +30,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { toast } from 'sonner';
+import Profile from '../user/Profile';
 
 
 type CartItem = {
@@ -43,8 +46,13 @@ export default function Header() {
     const router = useRouter()
     const [cart, setCart] = useState<CartItem[]>([]);
     const [search, setSearch] = useState("");
-    
+    const {user, isAuthenticated 
+    } = useAuth(); //Lấy user và trạng thái đăng nhập từ context
 
+    useEffect(() => {
+        console.log('User:', user);
+        console.log('IsAuthenticated:', isAuthenticated);
+    }, [user, isAuthenticated]);
     useEffect(() => {
         //Lấy dữ liệu giỏ hàng từ localstorage khi component amout
         const loadCart = () =>{
@@ -221,12 +229,21 @@ export default function Header() {
                         </PopoverContent>
                     </Popover>
 
+            </div>   
+            <div className="flex items-center gap-4">
+                
+                {isAuthenticated ? (
+                    // Hiển thị nút profile nếu đã đăng nhập
+                    <Profile />
+                ) : (
+                    // Nếu chưa đăng nhập, hiển thị nút đăng nhập
+                    // <div onClick={handleLoginClick}><LoginForm/></div>
+                    <LoginForm/>
+                )}
+                
             </div>
-            <div>
-                <LoginForm/>
             </div>
-            </div>
-           
         </div>
+        
     )
-};
+}
